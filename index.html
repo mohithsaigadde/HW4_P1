@@ -1,0 +1,70 @@
+<!--
+  Author & Contact
+  Name: Mohith Sai Gadde
+  Student ID: 02209215
+  Email: MohithSai_Gadde@student.uml.edu
+  GitHub Repository:
+  GitHub Pages (Live Demo):
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dynamic Multiplication Table</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Dynamic Multiplication Table</h1>
+      <p>
+        Enter integer ranges (−50..50). The top row are
+        <strong>multipliers</strong> (horizontal), the first column are
+        <strong>multiplicands</strong> (vertical).
+      </p>
+    </header>
+
+    <section class="card">
+      <form id="tableForm" novalidate>
+        <div class="row">
+          <div>
+            <label for="hStart">Horizontal start</label>
+            <input id="hStart" name="hStart" type="number" value="1" />
+          </div>
+          <div>
+            <label for="hEnd">Horizontal end</label>
+            <input id="hEnd" name="hEnd" type="number" value="5" />
+          </div>
+          <div>
+            <label for="vStart">Vertical start</label>
+            <input id="vStart" name="vStart" type="number" value="5" />
+          </div>
+          <div>
+            <label for="vEnd">Vertical end</label>
+            <input id="vEnd" name="vEnd" type="number" value="8" />
+          </div>
+        </div>
+        <div class="actions">
+          <button type="submit" class="btn-primary">Generate Table</button>
+          <button type="button" id="resetBtn" class="btn-ghost">Clear</button>
+          <span id="messages" class="note"></span>
+        </div>
+      </form>
+    </section>
+
+    <section class="card">
+      <div class="table-shell" id="tableShell"></div>
+    </section>
+
+    <footer>
+      <p><strong>Tip:</strong> You can change the numbers and click Generate again.</p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
